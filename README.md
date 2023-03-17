@@ -1,4 +1,4 @@
-# type-challenges
+# Solutions to type challenges
 
 A repository for storing all my solutions to the **awesome** type challenges found on https://github.com/type-challenges/type-challenges.
 
