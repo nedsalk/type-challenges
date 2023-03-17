@@ -1,3 +1,13 @@
 # type-challenges
 
-A repository for storing all the type challenges from https://github.com/type-challenges/type-challenges that I've completed.
+A repository for storing all my solutions to the **awesome** type challenges found on https://github.com/type-challenges/type-challenges.
+
+The title of the challenge is a hyperlink to the TS playground, and below it is just its solution.
+## Easy
+### [4 - Pick](https://www.typescriptlang.org/play#code/PQKgUABBAsELQQAoEsDGBrS8491gRgJ4QCCAdgC4AWA9mcQGICuEAFAAICGlAZkwJQQAxAFNOAZ2JCmZZHWH4myADYU4yMmCxCdEAIpMR4inM1YAkgFsADspGWRlCNRERFKtRogADFBgA8ACoANBAA0gB83hAA5o4iAE5oEADuyNQ0TBQQTOIaMRDpAHRaUADCdMYJTKgU4hCczoTWrkQQ1mjo+c5UruIi2TQ87Qk0LQkmRj5h0Tyjlj6B3qUQDDQJECIAHpw2dgBcK97HdVgaFIk8nKiugTQAJjQQAN5YUCYUBxBV+W8Q90ZUElrCY6PtvhQkmQYn9UDQ9gMRPdwfgaDQ7NwsABfFYUZq3B40RAJEQAN2QIhSEAAvBAALKEPzoIKE0IAcg+djZEAAPhA2XCERd7myIis4WRjM5CeC7o9iWSKVTaa8oGrnOkvmyyhiyBBRvC2cE-lBBbZEciIFdlP1jVAcVBjsssBEIAA1JUQeQAcXSAAkmPhwVQKBRrOJ9sBgHVUFQigArcRFdYxYDQMAgYBaUAQAD6+YLhYLEAAmpkNhUARA-YlXEX6-mIJmtHiWvTGZ0gpsthcyPd6jR8PGRLVQmFu73+xB0CJCEMIIFXSqsABtMKzwp6mdz4aBBr1dfEbaTg8QAD84Q34LIZMSAF1ZWvZ3ewDjsyA8w2iwujNkyhIpi-b9m2QGx1myVtXGeCAAFEAEcmE4ZRQhgrYWlqCAsSteZ+XYSC4FjJC7GhIxgCyFRxDZFt8QgVAAPqWkVywVD0Iofx4MQ5R2LQkdhQARlCBkmRZR52U5ERRQiCI7VgnjanYhCkO41ikQAJkEjsAjlGgxM1CTeX5M07GFSTpKwKMIDw8Q4G2VibISUYEiwITO203TPn0vkBXhc0TIMtkNFJJDkBFMyXzASD93uYZaRcrTWX5cTuS8oyLVFMBzkua4CUeF4sHE8EfmhLAAXEIFkBBUxCshX5TR84ykRRNFdVfLRMoSK4blklT7j4vL3j06qoRhN92s61wWN4tT+o1Dyhtq2j6otJr0TETQ3xzIDC1WJgJl6DYAGULnDT8ttzJss1AF0IAOqhOBJCA512750XIypg1DcNI2jMq40TZMElTaBgG4cQUkSa6PUpF7lDeyUPrDCMoxjP6kxTNNgHEV7QUla66XWVwyju5RiLiCMIBDRHvpRhM0cBjMsyAA)
+
+```ts
+type MyPick<T extends object, K extends keyof T> = {
+  [Key in keyof T as Key extends K ? Key : never]: T[Key]
+}
+```
